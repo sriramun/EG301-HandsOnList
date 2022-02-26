@@ -5,6 +5,7 @@
 #include <fcntl.h>
 #include <sys/types.h>
 #include <sys/stat.h>
+#include <sys/select.h>
 #include <errno.h>
 #include <stdio.h>
 
@@ -19,5 +20,10 @@
     val = fn; \
     if( val == -1 ) { \
         printf("error!  %d\n", errno); }
+
+#define FCALL( fn, val ) \
+    val = fn; \
+    if( val == -1 ) { \
+        printf("error!  %d\n", errno); return 1; }
 
 #endif
