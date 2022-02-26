@@ -17,4 +17,6 @@ int main() {
 
     // fifo
     CALL( mkfifo( pipeName, 0666 ), res ); 
+
+    return 0;
 }
