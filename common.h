@@ -8,8 +8,12 @@
 #include <errno.h>
 #include <stdio.h>
 
-#define PRINT( msg ) \
-    write( STDOUT_FILENO, msg, sizeof( msg ) - 1 );
+#define STR_DELETE( str ) \
+    str[0] = '\0';
+
+#define STR_APPEND( str, ch, i ) \
+    while( str[i] != '\0' ) i++; \
+    str[i] = ch; str[i+1] = '\0';
 
 #define CALL( fn, val ) \
     val = fn; \
