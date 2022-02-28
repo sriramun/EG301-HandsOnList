@@ -9,9 +9,12 @@
 #include <sys/resource.h>
 #include <sys/wait.h>
 #include <signal.h>
+#include <sched.h>
 #include <errno.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
+#include <time.h>
 
 #define STR_DELETE( str ) \
     str[0] = '\0';

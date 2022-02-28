@@ -4,7 +4,7 @@ int main() {
 
     int res;
 
-    char *args[] = { "/bin/ls", "-l", NULL };
+    char *args[] = { "/bin/ls", "-R", "-l", NULL };
 
     FCALL( execv( args[0], args ), res );
 
